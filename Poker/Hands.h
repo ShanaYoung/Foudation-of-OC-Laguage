@@ -11,17 +11,16 @@
 @interface Hands : NSObject
 
 {
-    Poker * _right ;
-    Poker * _left;
+    Poker * _poker;
 }
 
--(void)setRight:(Poker *)right;
+-(instancetype)initWithPoker:(Poker *) p;
 
--(void)setLeft:(Poker *)left;
+-(void)setPoke:(Poker *)poker;
 
--(Poker *)right;
+-(Poker *)poker;
 
--(Poker *)left;
+-(void)show;
 
 
 
