@@ -5,31 +5,25 @@
 //  Created by qianfeng on 16/3/14.
 //  Copyright © 2016年 Shana. All rights reserved.
 //
+#import "Hand.h"
 
-#import "Hands.h"
-
-@implementation Hands
-
--(void)setRight:(Poker *)right
-{
-    _right=right;
+@implementation Hand
+-(instancetype)initWithPoker:(Poker *) p{
+    self = [super init];
+    if(self !=nil){
+        _poker = p;
+    }
+    return self;
 }
 
--(void)setLeft:(Poker *)left
-{
-    _left=left;
+-(void)setPoker:(Poker *)poker{
+    _poker = poker;
+}
+-(Poker *)poker{
+    return _poker;
 }
 
--(Poker *)right
-{
-    return _right;
+-(void) show{
+    NSLog(@"手中有%@%c", [_poker color],[_poker num]);
 }
-
--(Poker *)left
-{
-    return _left;
-}
-
-
-
 @end
