@@ -8,22 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "Hands.h"
-#import "Poker.h"
+
 @interface Human : NSObject
 
 {
-    Poker * _right;
-    Poker * _left;
+    NSString * _name;
+    Hand * _rightHand;
+    Hand * _leftHand;
 }
 
--(void)setRight:(Poker *)right;
+-(instancetype)initWithName:(NSString *)name
+                   andRight:(Hand *)handR
+                   andLeft:(Hand *)handL;
 
--(void)setLeft:(Poker *)left;
+-(void)show;
+-(void)change;
 
--(Poker *)right;
-
--(Poker *)left;
-
+@end
 
 
 
