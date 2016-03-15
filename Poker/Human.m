@@ -10,24 +10,32 @@
 
 @implementation Human
 
--(void)setRight:(Poker *)right
-{
-    _right=right;
+-(instancetype)initWithName:(NSString *)name
+                   andRight:(Hand *)hanR
+                   andLeft:(Hand *)handL
+    {
+        self=[super init];
+        if(self)
+        {
+            _name = name;
+            _leftHand = handL;
+            _rightHand = handR;
+        }
+        return self;
+    }
+
+-(void)show{
+    NSLog(@"%@左手有%@%c， 右手有%@%c", _name, [[_leftHand poker] color],
+          [[_leftHand poker] num],[[_rightHand poker] color],
+          [[_rightHand poker] num]);
 }
 
--(void)setLeft:(Poker *)left
+-(void)change
 {
-    _left=left;
-}
-
--(Poker *)right
-{
-    return _right;
-}
-
--(Poker *)left
-{
-    return _left;
+  Poker * temp = [_rightHand poker];
+  [_rightHand setPoker:[_leftHand poker]];
+  [_leftHand setPoker:temp];
+    
 }
 
 @end
