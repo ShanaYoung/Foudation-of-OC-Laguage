@@ -1,8 +1,6 @@
 //
 //  Data.h
 //  day22_oc_hk
-//
-//  Created by qianfeng on 16/3/29.
 //  Copyright © 2016年 Shana. All rights reserved.
 //
 
