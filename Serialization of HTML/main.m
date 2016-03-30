@@ -1,8 +1,6 @@
 //
 //  main.m
 //  3
-//
-//  Created by qianfeng on 16/3/29.
 //  Copyright © 2016年 Shana. All rights reserved.
 //
 
