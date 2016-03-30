@@ -8,4 +8,6 @@ OC practice
                      A-->D,B-->E,C-->F,......,Y-->B,Z-->C.
 -----------------------------------------------------
 #####3.Serialization of HTML
-      The HTML file are translated into binary code and save as NSData, use NSString to get the information and save all the required information as class model. 
+      The HTML file are translated into binary code and save 
+      as NSData, use NSString to get the information and save 
+      all the required information as class model. 
